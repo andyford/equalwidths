@@ -1,6 +1,6 @@
 /*!
  * equalWidths jQuery Plugin
- * Examples and documentation at: hhttp://aloestudios.com/tools/jquery/equalwidths/
+ * Examples and documentation at: http://fordinteractive.com/tools/jquery/equalwidths/
  * Copyright (c) 2010 Andy Ford
  * Version: 0.1 (2010-04-13)
  * Dual licensed under the MIT and GPL licenses:
