@@ -10,15 +10,18 @@
  */
 (function($){
 	$.fn.equalWidths = function(options) {
-		var opts = $.extend({
-			stripPadding: 'none' // options: 'child', 'grand-child', 'both'
-		},options);
+		var w_parent,
+			w_child,
+			w_child_last,
+			opts = $.extend({
+				stripPadding: 'none' // options: 'child', 'grand-child', 'both'
+			},options);
 		return this.each(function(){
 			var child_count = $(this).children().size();
 			if (child_count > 0) { // only proceed if we've found any children
-				var w_parent = $(this).width();
-				var w_child = Math.floor(w_parent / child_count);
-				var w_child_last = w_parent - ( w_child * (child_count -1) );
+				w_parent = $(this).width();
+				w_child = Math.floor(w_parent / child_count);
+				w_child_last = w_parent - ( w_child * (child_count -1) );
 				$(this).children().css({ 'width' : w_child + 'px' });
 				$(this).children(':last-child').css({ 'width' : w_child_last + 'px' });
 				if((opts.stripPadding == 'child') || (opts.stripPadding == 'both')){
